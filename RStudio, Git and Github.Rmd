@@ -22,11 +22,17 @@ Git actions:
 
 1. Before we start working on collaborative projects, usually the first thing we do is pull in the changes from the remote repo, in our case, the one to GitHub.
 
-2. Add file
+2. Add file: click on the stage box next to the file in th git pane. Note that you only need to add the files that you want to keep track of or that you want to share.
+* Note: if our work is producing files of a certain type that we don't want to keep track of, we can
+add the suffix that defines these files in the gitignore file.
+* For an RStudio project, we recommend adding both the .gitignore and the .rproject files.
 
-3. Commit file
+3. Commit file: use the commit button in the git pane.
+* You have to provide a comment detailing with changed
+* The dialog window also gives you a summary of what has changed compared to the previous version.
 
 4. Push changes to repo
+* In the commit dialog window, click the push button.
 
 ## Status symbols
 
