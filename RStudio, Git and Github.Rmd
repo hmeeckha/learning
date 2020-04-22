@@ -1,0 +1,34 @@
+---
+title: "RStudio, Git and Github"
+author: "Hannah Eeckhaut"
+date: "4/22/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## How to sync to Github
+
+Your local files will not be synced automatically with the Github repo! You have to do this yourself.
+
+Git actions:
+* pull: pull changes from remote repo (if you are in collaboration with others)
+* add: stage files for commit; click on stage box under git pane
+* commit: commit to the local repo; click on "commit" button under git pane; add a commit message
+* push: push to the remote repo on Github
+
+
+1. Before we start working on collaborative projects, usually the first thing we do is pull in the changes from the remote repo, in our case, the one to GitHub.
+
+2. Add file
+
+3. Commit file
+
+4. Push changes to repo
+
+## Status symbols
+
+In the git pane, the files have a symbol.
+* Yellow square: Git knows nothing about this file.
