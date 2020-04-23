@@ -13,28 +13,48 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Your local files will not be synced automatically with the Github repo! You have to do this yourself.
 
-Git actions:
+Git actions: 
+
 * pull: pull changes from remote repo (if you are in collaboration with others)
 * add: stage files for commit; click on stage box under git pane
 * commit: commit to the local repo; click on "commit" button under git pane; add a commit message
 * push: push to the remote repo on Github
 
+Order of actions to be performed:
 
-1. Before we start working on collaborative projects, usually the first thing we do is pull in the changes from the remote repo, in our case, the one to GitHub.
+* Before we start working on collaborative projects, usually the first thing we do is pull in the changes from the remote repo, in our case, the one to GitHub.
 
-2. Add file: click on the stage box next to the file in th git pane. Note that you only need to add the files that you want to keep track of or that you want to share.
-* Note: if our work is producing files of a certain type that we don't want to keep track of, we can
+* Add file: click on the stage box next to the file in th git pane. Note that you only need to add the files that you want to keep track of or that you want to share.
+  + Note: if our work is producing files of a certain type that we don't want to keep track of, we can
 add the suffix that defines these files in the gitignore file.
-* For an RStudio project, we recommend adding both the .gitignore and the .rproject files.
+  + For an RStudio project, we recommend adding both the .gitignore and the .rproject files.
 
-3. Commit file: use the commit button in the git pane.
-* You have to provide a comment detailing with changed
-* The dialog window also gives you a summary of what has changed compared to the previous version.
+* Commit file: use the commit button in the git pane.
+  + You have to provide a comment detailing with changed
+  + The dialog window also gives you a summary of what has changed compared to the previous version.
 
-4. Push changes to repo
-* In the commit dialog window, click the push button.
+* Push changes to repo
+  + In the commit dialog window, click the push button.
 
 ## Status symbols
 
 In the git pane, the files have a symbol.
+
 * Yellow square: Git knows nothing about this file.
+
+## In combination with Unix commands
+
+Recap: there are four stages: working directory, staging area, local repository, and upstream repository
+
+Clone an existing upstream repository (copy repo url from clone button, and type "git clone <url>"), and all three local stages are the same as upstream remote.
+
+The working directory is the same as the working directory in Rstudio. When we edit files we only change the files in this place.
+
+* git status: tells how the files in the working directory are related to the files in other stages
+  + edits in the staging area are not tracked by the version control system by default - we add a file to the staging area by git add command
+* git commit: to commit files from the staging area to local repository, we need to add a message stating what we are doing by git commit -m "something"
+* git log: keeps track of all the changes we have made to the local repository
+* git push: allows moving from the local repository to upstream repository, only if you have the permission (e.g. if it is yours)
+* git fetch: update local repository to  be like the upstream repository, from upstream to local
+* git merge: make the updated local sync with the working directory and staging area
+To change everything in one shot (from upstream to working dir), use git pull (equivalent to combining git fetch + git merge)
